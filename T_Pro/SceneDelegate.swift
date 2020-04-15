@@ -8,8 +8,6 @@
 
 import UIKit
 
-private let blurViewtag: Int = 198489
-
 @available(iOS 13.0, *)
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -49,13 +47,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
   }
 
   func sceneWillEnterForeground(_ scene: UIScene) {
-    unblurPresentedView()
+//    unblurPresentedView()
     becomeFirstResponder()
     UIApplication.shared.beginReceivingRemoteControlEvents()
   }
 
   func sceneDidBecomeActive(_ scene: UIScene) {
-    unblurPresentedView()
+//    unblurPresentedView()
     becomeFirstResponder()
     UIApplication.shared.beginReceivingRemoteControlEvents()
   }
@@ -63,75 +61,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
   func sceneDidEnterBackground(_ scene: UIScene) {
     UIApplication.shared.endReceivingRemoteControlEvents()
     UIApplication.shared.ignoreSnapshotOnNextApplicationLaunch()
-    blurPresentedView()
+//    blurPresentedView()
     resignFirstResponder()
   }
 
   func sceneWillResignActive(_ scene: UIScene) {
     UIApplication.shared.ignoreSnapshotOnNextApplicationLaunch()
-    blurPresentedView()
+//    blurPresentedView()
   }
 
   func scene(_ scene: UIScene, continue userActivity: NSUserActivity) {
-  }
-
-}
-
-@available(iOS 13.0, *)
-extension SceneDelegate {
-
-  func blurPresentedView() {
-    UIApplication.shared.connectedScenes.forEach { (scene: UIScene) in
-
-      if let window: UIWindow = (scene.delegate as? SceneDelegate)?.window,
-        window.viewWithTag(blurViewtag) == nil,
-        let snapshot: UIView = bluredSnapshot(window) {
-
-        snapshot.alpha = 0.1
-        window.addSubview(snapshot)
-        UIView.animate(withDuration: 0.2) {
-          snapshot.alpha = 1.0
-        }
-
-      }
-
-    }
-  }
-
-  func unblurPresentedView() {
-
-    UIApplication.shared.connectedScenes.forEach { (scene: UIScene) in
-
-      if let window: UIWindow = (scene.delegate as? SceneDelegate)?.window,
-        let view: UIView = window.viewWithTag(blurViewtag) {
-
-        UIView.animate(withDuration: 0.2, animations: {
-          view.alpha = 0.0
-        }, completion: { _ in
-          view.removeFromSuperview()
-        })
-
-      }
-
-    }
-  }
-
-  func bluredSnapshot(_ window: UIWindow?) -> UIView? {
-
-    guard let snapshot: UIView = window?.snapshotView(afterScreenUpdates: true) else {
-      return nil
-    }
-
-    snapshot.addSubview(blurView(frame: snapshot.frame))
-    snapshot.tag = blurViewtag
-
-    return snapshot
-  }
-
-  func blurView(frame: CGRect) -> UIView {
-    let view: UIVisualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .light))
-    view.frame = frame
-    return view
   }
 
 }

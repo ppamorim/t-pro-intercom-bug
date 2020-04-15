@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30CED761670D8B0CDAB79859 /* Pods_T_Pro_Intercom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 426296B3F3FE3397ADB5363C /* Pods_T_Pro_Intercom.framework */; };
 		4820A5FE2125F41600987C3F /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48BB00ED2107804600AA2EC1 /* CloudKit.framework */; };
 		483519B423ABD846001D1B2C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483519AD23ABD846001D1B2C /* SceneDelegate.swift */; };
 		483519BD23ABDD40001D1B2C /* ViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483519B623ABDD40001D1B2C /* ViewBuilder.swift */; };
@@ -24,6 +25,8 @@
 
 /* Begin PBXFileReference section */
 		157C59951DCC9CE60011E05B /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		33D7AEE063197BC47E6DF787 /* Pods-T_Pro_Intercom.release-beacon.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-T_Pro_Intercom.release-beacon.xcconfig"; path = "Target Support Files/Pods-T_Pro_Intercom/Pods-T_Pro_Intercom.release-beacon.xcconfig"; sourceTree = "<group>"; };
+		426296B3F3FE3397ADB5363C /* Pods_T_Pro_Intercom.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_T_Pro_Intercom.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42F7D3D46DB4057FE485213E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		42F7D718780F6A853A90C62B /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		42F7D8A1E401EF11C64B712B /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -417,6 +420,7 @@
 		48F8B1BA22C7776300D2FD63 /* KDEAudioPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = KDEAudioPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		65EB52D11D8A170500B802B4 /* AWSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSCore.framework; path = "../../../Library/Developer/Xcode/DerivedData/T_Pro-gdwvsskhbefizcezbsehkavyudjt/Build/Products/Debug-iphonesimulator/AWSCore/AWSCore.framework"; sourceTree = "<group>"; };
 		65EB52D31D8A171000B802B4 /* AWSS3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSS3.framework; path = "../../../Library/Developer/Xcode/DerivedData/T_Pro-gdwvsskhbefizcezbsehkavyudjt/Build/Products/Debug-iphonesimulator/AWSS3/AWSS3.framework"; sourceTree = "<group>"; };
+		B69067E536C7FFA8B79AA766 /* Pods-T_Pro_Intercom.debug-beacon.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-T_Pro_Intercom.debug-beacon.xcconfig"; path = "Target Support Files/Pods-T_Pro_Intercom/Pods-T_Pro_Intercom.debug-beacon.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -426,6 +430,7 @@
 			files = (
 				48683D0B21E4EB620064B8D0 /* Intents.framework in Frameworks */,
 				4820A5FE2125F41600987C3F /* CloudKit.framework in Frameworks */,
+				30CED761670D8B0CDAB79859 /* Pods_T_Pro_Intercom.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -733,6 +738,7 @@
 				9ADF3E22798F5F1E7036F88E /* Frameworks */,
 				482D77061D393B9200849102 /* Localizable.strings */,
 				48AF7F151FA0E5A2000EC419 /* Localizable.strings */,
+				743CAF5B316DDD5B2F5C2A89 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -742,6 +748,16 @@
 				48C3E101212479B8008D6A06 /* T-Pro Intercom Bug.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		743CAF5B316DDD5B2F5C2A89 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B69067E536C7FFA8B79AA766 /* Pods-T_Pro_Intercom.debug-beacon.xcconfig */,
+				33D7AEE063197BC47E6DF787 /* Pods-T_Pro_Intercom.release-beacon.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		9ADF3E22798F5F1E7036F88E /* Frameworks */ = {
@@ -971,6 +987,7 @@
 				48B8159E1D2E935800E59093 /* AlamofireObjectMapper.framework */,
 				48B8159F1D2E935800E59093 /* ObjectMapper.framework */,
 				48B815A21D2E935800E59093 /* PureLayout.framework */,
+				426296B3F3FE3397ADB5363C /* Pods_T_Pro_Intercom.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -982,10 +999,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 48C3E0F4212479B8008D6A06 /* Build configuration list for PBXNativeTarget "T_Pro_Intercom" */;
 			buildPhases = (
+				6BA4394544BEBDBE04FBD055 /* [CP] Check Pods Manifest.lock */,
 				48C3DFAA212479B8008D6A06 /* Sources */,
 				48C3E0D2212479B8008D6A06 /* Resources */,
 				48C3E0DD212479B8008D6A06 /* Frameworks */,
 				48C3E0F3212479B8008D6A06 /* Fabric */,
+				CD5BEBAC645553711596FA6D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1054,6 +1073,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Fabric/run\" dd67b59e2e97705f1bdd2a8fa9553526b6e127b0 0dd6b34b3bc8f9a6aa1b1aa99c56b92d7dae167dae8a9eb7706ae4329bfc297b\n";
+		};
+		6BA4394544BEBDBE04FBD055 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-T_Pro_Intercom-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD5BEBAC645553711596FA6D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-T_Pro_Intercom/Pods-T_Pro_Intercom-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-T_Pro_Intercom/Pods-T_Pro_Intercom-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-T_Pro_Intercom/Pods-T_Pro_Intercom-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1162,6 +1220,7 @@
 		};
 		482F5D362124800D00223E8F /* Debug-Beacon */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B69067E536C7FFA8B79AA766 /* Pods-T_Pro_Intercom.debug-beacon.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
@@ -1262,6 +1321,7 @@
 		};
 		482F5D462124801F00223E8F /* Release-Beacon */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33D7AEE063197BC47E6DF787 /* Pods-T_Pro_Intercom.release-beacon.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;

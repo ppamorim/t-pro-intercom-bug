@@ -16,8 +16,6 @@ import Intercom
 private let INTERCOM_APP_ID: String = "ddddddd"
 private let INTERCOM_API_KEY: String = "ios_sdk-"
 
-private let blurViewtag: Int = 198489
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -47,7 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   }
 
   func applicationWillEnterForeground(_ application: UIApplication) {
-    unblurPresentedView()
+//    unblurPresentedView()
     becomeFirstResponder()
     application.beginReceivingRemoteControlEvents()
   }
@@ -55,17 +53,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func applicationDidEnterBackground(_ application: UIApplication) {
     application.endReceivingRemoteControlEvents()
     application.ignoreSnapshotOnNextApplicationLaunch()
-    blurPresentedView()
+//    blurPresentedView()
     resignFirstResponder()
   }
 
   func applicationWillResignActive(_ application: UIApplication) {
     application.ignoreSnapshotOnNextApplicationLaunch()
-    blurPresentedView()
+//    blurPresentedView()
   }
 
   func applicationDidBecomeActive(_ application: UIApplication) {
-    unblurPresentedView()
+//    unblurPresentedView()
   }
 
   func applicationWillTerminate(_ application: UIApplication) {
@@ -213,48 +211,4 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
       withCompletionHandler completionHandler: @escaping () -> Void) {
     completionHandler()
   }
-}
-
-extension AppDelegate {
-
-  func blurPresentedView() {
-    if let window: UIWindow = self.window,
-       window.viewWithTag(blurViewtag) == nil,
-       let snapshot: UIView = bluredSnapshot() {
-      snapshot.alpha = 0.1
-      window.addSubview(snapshot)
-      UIView.animate(withDuration: 0.2) {
-        snapshot.alpha = 1.0
-      }
-    }
-  }
-
-  //find and remove blured view
-  func unblurPresentedView() {
-    if let view: UIView = self.window?.viewWithTag(blurViewtag) {
-      UIView.animate(withDuration: 0.2, animations: {
-        view.alpha = 0.0
-      }, completion: { _ in
-        view.removeFromSuperview()
-      })
-    }
-  }
-
-  func bluredSnapshot() -> UIView? {
-    //take window snapshot
-    //and add blurView to it
-    guard let snapshot: UIView = self.window?.snapshotView(afterScreenUpdates: true) else {
-      return nil
-    }
-    snapshot.addSubview(blurView(frame: snapshot.frame))
-    snapshot.tag = blurViewtag
-    return snapshot
-  }
-
-  func blurView(frame: CGRect) -> UIView {
-    let view: UIVisualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .light))
-    view.frame = frame
-    return view
-  }
-
 }
