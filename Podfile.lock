@@ -2,12 +2,12 @@ PODS:
   - Crashlytics (3.14.0):
     - Fabric (~> 1.10.2)
   - Fabric (1.10.2)
-  - Intercom (9.3.5)
+  - Intercom (7.1.2)
 
 DEPENDENCIES:
   - Crashlytics (= 3.14.0)
   - Fabric (= 1.10.2)
-  - Intercom (= 9.3.5)
+  - Intercom (= 7.1.2)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -18,8 +18,8 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Crashlytics: 9220f5bc89e7a618df411b4f639389dbfb0e03d2
   Fabric: ea977e3cd9c20425516d3dafd3bf8c941c51223f
-  Intercom: efa4d74cd1fceeaa208d7fc505366c21e880a10f
+  Intercom: ce4923a73543fe70c805635846b6dadf03b0b847
 
-PODFILE CHECKSUM: 91630ce103c702148077d4005a981360a7aa7fdb
+PODFILE CHECKSUM: 56d5a7cde985eb47ef90e3cea0d1a9b306f962b3
 
 COCOAPODS: 1.10.1
