@@ -5,7 +5,7 @@ use_frameworks!
 def common_pods
   pod 'Fabric', '1.10.2'
   pod 'Crashlytics', '3.14.0'
-  pod 'Intercom', '6.0.2'
+  pod 'Intercom', '9.3.5'
 end
 
 target 'T_Pro_Intercom' do

@@ -16,9 +16,10 @@ final class BugViewController: BaseViewController {
     let width: CGFloat = 300
     let height: CGFloat = 80
     //No constraint layout now sorry, to be quick
-    let button = UILabel(frame: CGRect(x: self.view.frame.width/2 - width/2, y: self.view.frame.height/2 - height/2, width: width, height: height))
-    button.text = "Please close the app and open it again"
-    return button
+    let view = UILabel(frame: CGRect(x: self.view.frame.width/2 - width/2, y: self.view.frame.height/2 - height/2, width: width, height: height))
+    view.text = "Please close the app and open it again. Click on bug me again and look at your Status bar."
+    view.numberOfLines = 0
+    return view
   }()
 
   init() {

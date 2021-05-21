@@ -42,12 +42,14 @@ final class HomeViewController: UIPageViewController {
 
     Intercom.registerUser(withUserId: "101", email: "tpro_intercom_ios@tpro.io")
     Intercom.setUserHash("8e02316cdca654b5864409b8e28155b9")
+
+//    Intercom.logout()
   }
 
   @objc
   private func bugMeTouchUp() {
     let bugViewController: BugViewController = BugViewController()
-    self.parent?.present(bugViewController, animated: true, completion: nil)
+    self.parent?.present(bugViewController, animated: true)
   }
 
 }
