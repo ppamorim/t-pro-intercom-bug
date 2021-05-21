@@ -9,6 +9,7 @@
 import UIKit
 import Crashlytics
 import AudioToolbox.AudioServices
+import Intercom
 
 final class BugViewController: BaseViewController {
 
@@ -35,6 +36,11 @@ final class BugViewController: BaseViewController {
       self?.view.backgroundColor = UIColor.yellow
       self?.view.addSubview(closeAppLabel)
     }
+  }
+
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    Intercom.setNeedsStatusBarAppearanceUpdate() //Not helping
   }
 
 }

@@ -4,6 +4,8 @@
 
 By calling `Intercom.registerUser(withUserId:, email:)`, Intercom is doing something that when the app runs for the second time, the status bar text color(the thing that shows the hour/battery/wifi icons) cannot be changed.
 
+Video: https://youtu.be/uG1331U_Wvk
+
 ## Instructions:
 
 To build the project:
