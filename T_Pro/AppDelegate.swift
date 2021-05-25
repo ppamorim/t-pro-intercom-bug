@@ -13,8 +13,8 @@ import Fabric
 import Crashlytics
 import Intercom
 
-private let INTERCOM_APP_ID: String = "ddddddd"
-private let INTERCOM_API_KEY: String = "ios_sdk-"
+let INTERCOM_APP_ID: String = "ddddddd"
+let INTERCOM_API_KEY: String = "ios_sdk-"
 
 private let blurViewtag: Int = 198489
 
@@ -42,7 +42,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     buildViewForWindow(launchOptions)
     becomeFirstResponder()
     application.beginReceivingRemoteControlEvents()
-
     return true
   }
 
@@ -159,8 +158,10 @@ extension AppDelegate {
 	}
 
   fileprivate func setupIntercom() {
-    Intercom.setApiKey(INTERCOM_API_KEY, forAppId: INTERCOM_APP_ID)
-    Intercom.setLauncherVisible(false)
+    if #available(iOS 13.0, *) { } else {
+      Intercom.setApiKey(INTERCOM_API_KEY, forAppId: INTERCOM_APP_ID)
+      Intercom.setLauncherVisible(false)
+    }
   }
 
 }

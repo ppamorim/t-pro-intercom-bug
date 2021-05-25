@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Intercom
 
 private let blurViewtag: Int = 198489
 
@@ -40,6 +41,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
       sceneDelegate.window,
       statusBarFrame,
       windowScene)
+    
+    Intercom.setApiKey(INTERCOM_API_KEY, forAppId: INTERCOM_APP_ID)
+    Intercom.setLauncherVisible(false)
   }
 
   func windowScene(
